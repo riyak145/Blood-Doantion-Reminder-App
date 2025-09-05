@@ -58,9 +58,9 @@ This app reminds eligible donors when they can donate again, provides educationa
 
 ---
 Team Members
-Riya Kanani
-Harish Rathod
-
+- Riya Kanani
+- Harish Rathod
+  
 ---
 
 License
