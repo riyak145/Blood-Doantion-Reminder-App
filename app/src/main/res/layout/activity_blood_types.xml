@@ -1,0 +1,596 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BloodTypesActivity"
+    android:background="@color/color7">
+
+    <!-- Header -->
+    <include
+        layout="@layout/toolbar_red"
+        android:id="@+id/toolbar_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Blood Type Cards -->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_red"
+        app:layout_constraintBottom_toTopOf="@id/footer_include"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:layout_marginBottom="16dp">
+
+            <!-- BLOOD CARD TEMPLATE - repeat for each type -->
+            <!-- Repeat this block for each blood type -->
+            <!-- Example: A+ -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A+ (A positive)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: A+, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: A+, A-, O+, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Common in India\n• Highly needed for patients with A+ and AB+ blood types."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="A- (A negative)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: A-, A+, AB-, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: A-, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Rare type\n• Often used in trauma units"
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B+ (B positive)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: B-, B+, AB-, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: B-, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Rarest blood type\n• Often needed in cancer or organ transplant cases."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="B- (B negative)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: B-, B+, AB-, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: B-, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Relatively rare\n• Needed for rare match cases."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AB+ (AB positive)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: All blood types"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Universal recipient\n• Critical for patients with multiple antibodies."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="AB- (AB negative)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: AB-, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: A-, B-, AB-, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Rarest blood type\n• Often needed in cancer or organ transplant cases."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O+ (O positive)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: O+, A+, B+, AB+"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: O+, O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Most common type worldwide\n• In high demand for trauma patients."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="16dp"
+                android:elevation="6dp"
+                android:layout_gravity="center"
+                android:backgroundTint="@color/white"
+                android:layout_marginTop="8dp"
+                android:clipToOutline="true"
+                android:backgroundTintMode="src_in"
+                android:layout_marginStart="4dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/rounded_card_bg">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <!-- Optionally use an SVG here (vector drawable) -->
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/logo_drop"
+                        app:tint="@color/color6"
+                        android:layout_marginEnd="8dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="O- (O negative)"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@color/color6"
+                        android:fontFamily="sans-serif-medium" />
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can donate to: All blood types"
+                    android:layout_marginTop="12dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Can receive from: O-"
+                    android:layout_marginTop="4dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    android:fontFamily="sans-serif" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="• Universal donor\n• Used in emergencies when blood type is unknown."
+                    android:layout_marginTop="6dp"
+                    android:textColor="@android:color/black"
+                    android:textSize="13sp"
+                    android:fontFamily="sans-serif"
+                    android:justificationMode="inter_word" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Footer -->
+    <include
+        android:id="@+id/footer_include"
+        layout="@layout/footer_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

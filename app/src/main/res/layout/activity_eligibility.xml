@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EligibilityActivity">
+
+    <!-- Fixed Header -->
+    <include
+        android:id="@+id/toolbar_red"
+        layout="@layout/toolbar_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_red"
+        app:layout_constraintBottom_toTopOf="@id/footer_include"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Eligibility Criteria for Blood Donation"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/color1"
+                android:layout_marginBottom="16dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Basic Criteria -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Basic Requirements"
+                android:textColor="@color/color6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="• Age should be between 18 and 65 years.\n• Weight should be 50 kg or above.\n• Hemoglobin should be at least 12.5 g/dL.\n• Pulse rate, blood pressure, and temperature should be normal.\n• You should feel healthy and well on the day of donation." />
+
+            <!-- Donation Gap -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Minimum Time Between Donations"
+                android:textColor="@color/color6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="• Male donors can donate every 3 months.\n• Female donors can donate every 4 months.\nThis gap ensures that the donor's health is maintained and iron levels are restored." />
+
+            <!-- Conditions to Defer -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temporary Deferral Conditions"
+                android:textColor="@color/color6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="You may be temporarily deferred from donating blood if:\n• You have a cold, flu, or fever.\n• You’ve had dental work in the past 24 hours (or 72 hours for major work).\n• You’ve recently received vaccinations.\n• You are pregnant or have recently given birth.\n• You’ve had surgery in the past 6–12 months depending on the type." />
+
+            <!-- Permanent Deferral -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Permanent Deferral Conditions"
+                android:textColor="@color/color6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="Permanent deferral applies to individuals with:\n• Hepatitis B or C, HIV, or other STIs.\n• History of drug abuse or alcoholism.\n• Certain heart, lung, or blood disorders.\n• Cancer (depending on type and treatment history)." />
+
+            <!-- Final Note -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Note"
+                android:textColor="@color/color6"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="Before donating, a medical professional will screen you to ensure safety for both the donor and the recipient. Always answer the pre-donation questionnaire honestly." />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Footer -->
+    <include
+        android:id="@+id/footer_include"
+        layout="@layout/footer_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/toolbar_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toTopOf="@id/footer_include">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/welcomeText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Welcome, User"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:layout_gravity="center_horizontal"
+                android:paddingTop="16dp" />
+
+            <LinearLayout
+                android:id="@+id/daysLeftCard"
+                android:layout_width="match_parent"
+                android:layout_height="188dp"
+                android:layout_marginTop="24dp"
+                android:background="@drawable/card_background"
+                android:elevation="8dp"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/daysLeftText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Eligible in 90 days"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/dateToDonate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="You can donate blood every 3 months" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btnAddBloodDonation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Blood Donation"
+                android:backgroundTint="@color/color6"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="18dp" />
+
+            <Button
+                android:id="@+id/btnAddBloodReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Add Blood Reminder"
+                android:backgroundTint="@color/color6"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="18dp"
+                android:visibility="gone"/>
+
+<!--            <Button-->
+<!--                android:id="@+id/btnAddSDPDonation"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="Add SDP Donation"-->
+<!--                android:backgroundTint="@color/color6"-->
+<!--                android:textColor="@android:color/white"-->
+<!--                android:layout_marginTop="18dp" />-->
+
+            <GridLayout
+                android:id="@+id/infoGrid"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:columnCount="2"
+                android:rowCount="4"
+                android:useDefaultMargins="true">
+
+                <!-- Reusable Box Template -->
+                <!-- Card 1 -->
+                <LinearLayout
+                    android:id="@+id/donationCentre"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_donation_center" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Donation Centres"
+                        android:textAlignment="center" />
+                </LinearLayout>
+
+                <!-- Card 2 -->
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/requestForm"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:background="@drawable/card_background"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--                    <ImageView-->
+<!--                        android:layout_width="50dp"-->
+<!--                        android:layout_height="50dp"-->
+<!--                        android:src="@drawable/logo_blood_request" />-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:text="Request Form"-->
+<!--                        android:textAlignment="center" />-->
+<!--                </LinearLayout>-->
+
+                <!-- Card 3 to Card 8 -->
+                <LinearLayout
+                    android:id="@+id/achievementList"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_achievement" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Achievement List" />
+                </LinearLayout>
+
+<!--                <LinearLayout-->
+<!--                    android:id="@+id/eduResources"-->
+<!--                    android:layout_width="0dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_columnWeight="1"-->
+<!--                    android:layout_rowWeight="1"-->
+<!--                    android:background="@drawable/card_background"-->
+<!--                    android:orientation="vertical"-->
+<!--                    android:gravity="center"-->
+<!--                    android:padding="16dp">-->
+
+<!--&lt;!&ndash;                    <ImageView&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_width="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:layout_height="50dp"&ndash;&gt;-->
+<!--&lt;!&ndash;                        android:src="@drawable/ic_education" />&ndash;&gt;-->
+
+<!--                    <TextView-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:textAlignment="center"-->
+<!--                        android:text="Educational Resources" />-->
+<!--                </LinearLayout>-->
+
+                <LinearLayout
+                    android:id="@+id/donationImportance"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_importance" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Donation Importance" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/donationProcess"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_process" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Donation Process" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/eligibility"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_eligiblity" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Eligibility" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bloodTypes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_blood_types" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Blood Types" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/donorBenefits"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_benefits" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Donor Benefits" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/reminders"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:layout_rowWeight="1"
+                    android:background="@drawable/card_background"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="16dp">
+
+                    <ImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:src="@drawable/logo_benefits" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        android:text="Reminders" />
+                </LinearLayout>
+
+            </GridLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <include
+        android:id="@+id/footer_include"
+        layout="@layout/footer_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

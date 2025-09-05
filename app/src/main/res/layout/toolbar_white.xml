@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/customToolbar"
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="0.13"
+    android:background="@drawable/toolbar_bg_rounded_white"
+    android:elevation="35dp"
+    android:padding="16dp"
+    android:layout_marginTop="0dp"
+    android:minHeight="80dp"
+    android:gravity="center">
+
+
+    <!-- Back arrow -->
+<!--    <ImageView-->
+<!--        android:id="@+id/backArrow"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:src="@drawable/logo_back_arrow_red"-->
+<!--        android:layout_gravity="start|center_vertical"-->
+<!--        android:contentDescription="Back"/>-->
+
+    <!-- Title in center -->
+    <TextView
+        android:id="@+id/toolbarTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Log In"
+        android:textColor="#B20F1C"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"/>
+
+</androidx.appcompat.widget.Toolbar>

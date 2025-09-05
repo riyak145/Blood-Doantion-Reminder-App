@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#FFFFFF"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:gravity="center">
+
+    <!-- Settings -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_settings"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo_setting" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Settings"
+            android:textColor="@color/color6"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Home -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_home"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo_home"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Home"
+            android:textColor="@color/color6"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <!-- Profile -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/icon_profile"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/logo_profile" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Profile"
+            android:textColor="@color/color6"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+</LinearLayout>

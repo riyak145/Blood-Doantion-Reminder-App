@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelpSupportActivity">
+
+    <!-- Fixed Toolbar/Header -->
+    <include
+        android:id="@+id/toolbar_red"
+        layout="@layout/toolbar_red"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Scrollable Help Content -->
+    <ScrollView
+        android:id="@+id/scrollViewContent"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_red"
+        app:layout_constraintBottom_toTopOf="@id/footer_include"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Main Heading -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Help &amp; Support"
+                android:textColor="@color/color1"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <!-- Introduction -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="Need help or have questions? We’re here for you. This section provides answers to common queries and information on how to contact us for support." />
+
+            <!-- FAQs -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Frequently Asked Questions"
+                android:textColor="@color/color1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="• How do I update my last donation date?\n  → Go to the Home screen and tap on 'Add Donation'.\n\n• Why haven't I received a reminder?\n  → Make sure you’ve granted notification permissions and your donation history is up-to-date.\n\n• How do I change my profile info?\n  → Go to the Profile page to update your personal details." />
+
+            <!-- Contact -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Us"
+                android:textColor="@color/color1"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="8dp"
+                android:fontFamily="sans-serif-medium" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@android:color/black"
+                android:textSize="14sp"
+                android:fontFamily="sans-serif"
+                android:justificationMode="inter_word"
+                android:text="If you still need help, feel free to reach out to us. Our support team typically responds within 24 hours.\n\n• Email: support@bloodreminderapp.com\n• Phone: +91-9876543210\n• Available: Mon–Sat, 10:00 AM to 6:00 PM" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Fixed Footer -->
+    <include
+        android:id="@+id/footer_include"
+        layout="@layout/footer_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

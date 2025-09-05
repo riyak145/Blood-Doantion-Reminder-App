@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Zindagi</string>
+
+    <string-array name="blood_groups">
+        <item>Select</item>
+        <item>A+</item>
+        <item>A−</item>
+        <item>B+</item>
+        <item>B−</item>
+        <item>AB+</item>
+        <item>AB−</item>
+        <item>O+</item>
+        <item>O−</item>
+    </string-array>
+
+    <string name="account_preferences">Account &amp; Preferences</string>
+    <string name="about_us">About Us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_conditions">Terms &amp; Conditions</string>
+    <string name="help_support">Help &amp; Support</string>
+    <string name="logout">Logout</string>
+
+    <string name="terms">You are above 18 \n and agree to our terms and conditions</string>
+</resources>
